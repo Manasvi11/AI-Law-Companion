@@ -43,7 +43,8 @@ AI Law Companion, branded in the app as RightSpeak, is an AI-powered legal guida
 |   |-- pages/                 # Page-level components
 |   |-- sections/              # Landing and chat sections
 |   `-- types/                 # TypeScript types
-|-- server.cjs                 # Local Express API server
+|-- scripts/
+|   `-- local-api.cjs          # Local Express API server
 |-- vite.config.ts             # Vite config and local API proxy
 |-- vercel.json                # Vercel SPA rewrite config
 `-- .env.example               # Example environment variables
