@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sage Green & Warm Cream Palette - Reflect App Inspired */
+    --background: 40 24% 96%;
+    --foreground: 140 12% 20%;
+    --card: 40 30% 97%;
+    --card-foreground: 140 12% 20%;
+    --popover: 40 30% 97%;
+    --popover-foreground: 140 12% 20%;
+    --primary: 90 12% 54%;
+    --primary-foreground: 40 30% 97%;
+    --secondary: 35 30% 65%;
+    --secondary-foreground: 140 12% 20%;
+    --muted: 80 10% 90%;
+    --muted-foreground: 100 8% 50%;
+    --accent: 35 35% 64%;
+    --accent-foreground: 40 30% 97%;
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 40 30% 97%;
+    --border: 80 12% 85%;
+    --input: 80 12% 88%;
+    --ring: 90 12% 54%;
+    --radius: 1.125rem;
+    
+    /* Custom brand colors */
+    --sage-50: #f6f7f3;
+    --sage-100: #e8ebe0;
+    --sage-200: #d4d9c4;
+    --sage-300: #b8c0a0;
+    --sage-400: #9ba882;
+    --sage-500: #7d8d64;
+    --sage-600: #63704e;
+    --sage-700: #4d5740;
+    --sage-800: #3f4736;
+    --sage-900: #363d2f;
+    
+    --cream-50: #fdfcfa;
+    --cream-100: #f9f6ef;
+    --cream-200: #f3ede2;
+    --cream-300: #ebe3d3;
+    --cream-400: #dfd4bd;
+    --cream-500: #d0c2a6;
+    
+    --terra-300: #dbc9a8;
+    --terra-400: #c9b08e;
+    --terra-500: #b89a78;
+    
+    --forest-800: #2c3326;
+    --forest-900: #1f2419;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  
+  h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Playfair Display', 'DM Serif Display', Georgia, serif;
+  }
+  
+  .font-sans {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  
+  .glass-dark {
+    background: rgba(44, 51, 38, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .text-gradient-sage {
+    background: linear-gradient(135deg, var(--sage-500) 0%, var(--sage-700) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-sage {
+    background: linear-gradient(135deg, var(--sage-300) 0%, var(--sage-500) 100%);
+  }
+  
+  .bg-gradient-cream {
+    background: linear-gradient(180deg, var(--cream-100) 0%, var(--cream-200) 100%);
+  }
+  
+  .bg-nature-gradient {
+    background: linear-gradient(180deg, 
+      var(--cream-100) 0%, 
+      var(--sage-100) 40%, 
+      var(--sage-200) 70%,
+      var(--sage-300) 100%
+    );
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(125, 141, 100, 0.25) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(125, 141, 100, 0.25);
+    border-radius: 10px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(125, 141, 100, 0.4);
+  }
+  
+  .card-glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 24px rgba(44, 51, 38, 0.06);
+    border-radius: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-glass:hover {
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px rgba(44, 51, 38, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .card-soft {
+    background: var(--cream-50);
+    border: 1px solid var(--cream-300);
+    border-radius: 1.25rem;
+    box-shadow: 0 2px 12px rgba(44, 51, 38, 0.04);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-soft:hover {
+    box-shadow: 0 6px 24px rgba(44, 51, 38, 0.08);
+    transform: translateY(-3px);
+    border-color: var(--sage-200);
+  }
+  
+  .btn-sage {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    background: var(--sage-500);
+    color: white;
+    box-shadow: 0 2px 12px rgba(125, 141, 100, 0.3);
+  }
+  
+  .btn-sage:hover {
+    background: var(--sage-600);
+    box-shadow: 0 4px 20px rgba(125, 141, 100, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .btn-terra {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    background: var(--terra-500);
+    color: white;
+    box-shadow: 0 2px 12px rgba(184, 154, 120, 0.3);
+  }
+  
+  .btn-terra:hover {
+    background: #a88968;
+    box-shadow: 0 4px 20px rgba(184, 154, 120, 0.4);
+    transform: translateY(-1px);
+  }
+  
+  .btn-ghost-sage {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+    background: transparent;
+    color: var(--sage-600);
+    border: 1.5px solid var(--sage-300);
+  }
+  
+  .btn-ghost-sage:hover {
+    background: var(--sage-50);
+    border-color: var(--sage-400);
+  }
+  
+  .input-sage {
+    @apply px-4 py-3 rounded-2xl text-sm outline-none transition-all duration-300;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1.5px solid var(--cream-300);
+    color: var(--forest-900);
+  }
+  
+  .input-sage:focus {
+    border-color: var(--sage-400);
+    box-shadow: 0 0 0 3px rgba(125, 141, 100, 0.15);
+    background: white;
+  }
+  
+  .input-sage::placeholder {
+    color: var(--sage-300);
+  }
+  
+  .float-gentle {
+    animation: floatGentle 5s ease-in-out infinite;
+  }
+  
+  @keyframes floatGentle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .typing-dot-sage {
+    animation: typingSage 1.4s ease-in-out infinite;
+  }
+  
+  .typing-dot-sage:nth-child(2) { animation-delay: 0.2s; }
+  .typing-dot-sage:nth-child(3) { animation-delay: 0.4s; }
+  
+  @keyframes typingSage {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-5px); opacity: 1; }
+  }
+  
+  .pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulseSoft {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+  }
+}

@@ -1,0 +1,72 @@
+import type { Country, Language } from '@/types';
+
+export const COUNTRIES: Country[] = [
+  { code: 'US', name: 'United States', flag: '🇺🇸', languages: ['en', 'es'] },
+  { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', languages: ['en'] },
+  { code: 'IN', name: 'India', flag: '🇮🇳', languages: ['en', 'hi', 'bn', 'te', 'mr', 'ta', 'ur'] },
+  { code: 'CA', name: 'Canada', flag: '🇨🇦', languages: ['en', 'fr'] },
+  { code: 'AU', name: 'Australia', flag: '🇦🇺', languages: ['en'] },
+  { code: 'DE', name: 'Germany', flag: '🇩🇪', languages: ['de', 'en'] },
+  { code: 'FR', name: 'France', flag: '🇫🇷', languages: ['fr', 'en'] },
+  { code: 'BR', name: 'Brazil', flag: '🇧🇷', languages: ['pt', 'en'] },
+  { code: 'MX', name: 'Mexico', flag: '🇲🇽', languages: ['es', 'en'] },
+  { code: 'JP', name: 'Japan', flag: '🇯🇵', languages: ['ja', 'en'] },
+  { code: 'CN', name: 'China', flag: '🇨🇳', languages: ['zh', 'en'] },
+  { code: 'NG', name: 'Nigeria', flag: '🇳🇬', languages: ['en', 'ha', 'yo', 'ig'] },
+  { code: 'ZA', name: 'South Africa', flag: '🇿🇦', languages: ['en', 'af', 'zu'] },
+  { code: 'KE', name: 'Kenya', flag: '🇰🇪', languages: ['en', 'sw'] },
+  { code: 'PK', name: 'Pakistan', flag: '🇵🇰', languages: ['en', 'ur'] },
+  { code: 'BD', name: 'Bangladesh', flag: '🇧🇩', languages: ['bn', 'en'] },
+  { code: 'SG', name: 'Singapore', flag: '🇸🇬', languages: ['en', 'zh', 'ms', 'ta'] },
+  { code: 'AE', name: 'UAE', flag: '🇦🇪', languages: ['ar', 'en'] },
+  { code: 'SA', name: 'Saudi Arabia', flag: '🇸🇦', languages: ['ar', 'en'] },
+  { code: 'ID', name: 'Indonesia', flag: '🇮🇩', languages: ['id', 'en'] },
+];
+
+export const LANGUAGES: Language[] = [
+  { code: 'en', name: 'English', nativeName: 'English' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español' },
+  { code: 'fr', name: 'French', nativeName: 'Français' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch' },
+  { code: 'hi', name: 'Hindi', nativeName: 'हिन्दी' },
+  { code: 'bn', name: 'Bengali', nativeName: 'বাংলা' },
+  { code: 'zh', name: 'Chinese', nativeName: '中文' },
+  { code: 'ja', name: 'Japanese', nativeName: '日本語' },
+  { code: 'ar', name: 'Arabic', nativeName: 'العربية' },
+  { code: 'pt', name: 'Portuguese', nativeName: 'Português' },
+  { code: 'ru', name: 'Russian', nativeName: 'Русский' },
+  { code: 'ur', name: 'Urdu', nativeName: 'اردو' },
+  { code: 'ta', name: 'Tamil', nativeName: 'தமிழ்' },
+  { code: 'te', name: 'Telugu', nativeName: 'తెలుగు' },
+  { code: 'mr', name: 'Marathi', nativeName: 'मराठी' },
+  { code: 'tr', name: 'Turkish', nativeName: 'Türkçe' },
+  { code: 'ko', name: 'Korean', nativeName: '한국어' },
+  { code: 'it', name: 'Italian', nativeName: 'Italiano' },
+  { code: 'nl', name: 'Dutch', nativeName: 'Nederlands' },
+  { code: 'sw', name: 'Swahili', nativeName: 'Kiswahili' },
+  { code: 'id', name: 'Indonesian', nativeName: 'Bahasa Indonesia' },
+  { code: 'ms', name: 'Malay', nativeName: 'Bahasa Melayu' },
+  { code: 'af', name: 'Afrikaans', nativeName: 'Afrikaans' },
+  { code: 'zu', name: 'Zulu', nativeName: 'isiZulu' },
+  { code: 'ha', name: 'Hausa', nativeName: 'Hausa' },
+  { code: 'yo', name: 'Yoruba', nativeName: 'Yorùbá' },
+  { code: 'ig', name: 'Igbo', nativeName: 'Igbo' },
+];
+
+export const QUICK_TOPICS = [
+  { icon: 'Home', label: 'Rent & Housing', description: 'Landlord issues, leases, evictions', color: 'bg-blue-100 text-blue-700' },
+  { icon: 'Briefcase', label: 'Work & Employment', description: 'Wrongful termination, wages, rights', color: 'bg-amber-100 text-amber-700' },
+  { icon: 'Car', label: 'Accidents & Injury', description: 'Car crashes, personal injury claims', color: 'bg-rose-100 text-rose-700' },
+  { icon: 'CreditCard', label: 'Consumer Rights', description: 'Scams, refunds, faulty products', color: 'bg-emerald-100 text-emerald-700' },
+  { icon: 'Users', label: 'Family Matters', description: 'Divorce, custody, inheritance', color: 'bg-purple-100 text-purple-700' },
+  { icon: 'Smartphone', label: 'Digital Rights', description: 'Privacy, cybercrime, data theft', color: 'bg-cyan-100 text-cyan-700' },
+  { icon: 'Shield', label: 'Civil Rights', description: 'Discrimination, police, free speech', color: 'bg-indigo-100 text-indigo-700' },
+  { icon: 'FileText', label: 'Document Help', description: 'Contracts, notices, agreements', color: 'bg-orange-100 text-orange-700' },
+];
+
+export const SAMPLE_CONVERSATIONS = [
+  { title: 'Landlord won\'t return security deposit', preview: 'My landlord is refusing to return...', time: '2 min ago' },
+  { title: 'Wrongful termination at work', preview: 'I was fired without any warning...', time: '1 hour ago' },
+  { title: 'Car accident insurance claim', preview: 'The insurance company is offering...', time: '3 hours ago' },
+  { title: 'College notice about attendance', preview: 'I received a notice saying I might...', time: 'Yesterday' },
+];
