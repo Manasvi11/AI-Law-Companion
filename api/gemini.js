@@ -1,9 +1,5 @@
 const GEMINI_MODEL = 'gemini-2.0-flash';
 
-export const config = {
-  runtime: 'edge',
-};
-
 export default async function handler(request) {
   if (request.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
